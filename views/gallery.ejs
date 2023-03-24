@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%=title%> </title>
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/utils.css">
+      <link rel="stylesheet" href="css/mobile.css">
+      <link rel="stylesheet" href="css/gallery.css">
+      <link rel="icon" type="image/x-icon" href="/img/clglogo.png">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="" id="body">
+      <div class="loader" id="loader">
+            <div>
+      
+            </div>
+          </div>
+          <%-include("../partials/topbanner")%>
+          <%-include("../partials/header")%>
+
+      <div class="gallery-container flex items-center max-width mx-auto my-1">
+            <div class="gallery-text">
+                  <h2 class="gallery-heading">
+                        Gallery
+                  </h2>
+                  <p class="gallery-subheading">
+                        <strong>" When words become unclear,</strong> I shall focus with photographs. When images become
+                        inadequate, I shall be content with silence."
+                  </p>
+            </div>
+            <div class="gallery">
+                  <div class="box row-2" style="background-image: url(img/campus1-2-.jpg);">Campus</div>
+                  <div class="box col-2" style="background-image: url(img/Conference\ hall.jpg);">Hall</div>
+                  <div class="box" style="background-image: url(img/classroom.jpg);">Classroom</div>
+                  <div class="box row-2" style="background-image: url(img/ground.jpg);">Ground</div>
+                  <div class="box col-2" style="background-image: url(img/gallery-library.jpg);">Library</div>
+                  <div class="box" style="background-image: url(img/park.jpg);">Park</div>
+                  <div class="box col-2" style="background-image: url(img/canteen1.jpg);">Canteen</div>
+            </div>
+
+      </div>
+
+
+
+      <%-include("../partials/footer")%>
+
+      <%-include("../partials/loaderscript")%>
+
+
+
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script src="https://kit.fontawesome.com/23ed0aa629.js" crossorigin="anonymous"></script>
+      <script src="js/main.js"></script>
+</body>
+
+</html>

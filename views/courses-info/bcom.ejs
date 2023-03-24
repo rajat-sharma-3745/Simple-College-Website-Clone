@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%=title%> </title>
+      <link rel="stylesheet" href="/css/main.css">
+      <link rel="stylesheet" href="/css/utils.css">
+      <!-- <link rel="stylesheet" href="/css/courses.css"> -->
+      <link rel="stylesheet" href="/css/courseinfo.css">
+      <link rel="stylesheet" href="/css/mobile.css">
+      <link rel="icon" type="image/x-icon" href="/img/clglogo.png">
+      <!-- <link rel="stylesheet" href="css/coursesmobile.css"> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body class="" id="body">
+      <div class="loader" id="loader">
+            <div>
+
+            </div>
+      </div>
+      <!-- top banner for clg logo,name and email -->
+      <%-include("../../partials/topbanner")%>
+      <%-include("../../partials/header")%>
+
+      <section class="course-information">
+            <div class="max-width mx-auto flex flex-col items-center">
+
+                  <h1 class="text-bold text-center py-1">Bachelor of Commerce</h1>
+                  <div class="description my-1" >
+                        <h2>Description</h2>
+                        <p>B.Com is one of India's most sought-after undergraduate courses because of the
+                              wide range of career options it provides. Commerce is the country's most vital
+                              industry, and it has a significant impact on the economy. As the economy
+                              grows, so will the number of job opportunities in the commerce sector.Commerce
+                              is concerned with one section of economics activities.it is a system through
+                              which raw materials are distributed to the producers and the finished products
+                              to the consumers</p>
+                  </div>
+                  <div class="faculty my-1" >
+                        <h2>Faculty Profile</h2>
+                        <p>The course of bachelor of Commerce (B.Com.) is being offered in the institution under acdemics scheme and regulated through the Higher education institute sociaty regd.Under cooperative sociaty act 1960. The durationn of B.Com. degree course is the three years spread over in six semsester and is affiliated to Himachal pradesh university shimla. The basic objective start this courses in this institution is to imaprt quality education in commerce to the candidates admitted for the course to build their career in the business paradiagm.</p>
+                  </div>
+                  <div class="eligibility my-1" >
+                        <h2>Eligibility Conditions</h2>
+                        <p>A candidate who has passed 10+2 or equivalent examination can get admission in the Ist year
+                              of three years degree course of B.COM. if he/she fulfills the following eligibility
+                              conditions: <br>
+
+                              <strong>1.</strong> An applicant must not be more than 23 years of age (25 yrs. in case of
+                              girl students) . The upper age limit is relax able by three years for SC/ST candidates.
+                              <br>
+                              <strong>2.</strong> Minimum percentage of marks for admission to the Ist year of B.COM. is
+                              33%. <br>
+                              <strong>3.</strong> An applicant seeking admission in B.Com. I year must have passed 10+2 in commerce or should have studied Mathematics/Economics as compulsory subject at 10+2 level
+                        </p>
+                  </div>
+                  <a href="/courses" class="primary-button text-center my-2" >Go back</a>
+            </div>
+      </section>
+
+      <%-include("../../partials/footer")%>
+      <%-include("../../partials/loaderscript")%>
+
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+            AOS.init();
+      </script>
+
+
+
+
+      <script src="https://kit.fontawesome.com/23ed0aa629.js" crossorigin="anonymous"></script>
+      <script src="/js/main.js"></script>
+</body>
+
+</html>

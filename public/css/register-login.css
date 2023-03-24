@@ -1,0 +1,197 @@
+.register-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: calc(100vh-140px); */
+      padding: 20px;
+      background-color: var(--register-bg);
+}
+.register-div{
+  
+      margin-block: 15px;
+      /* position: relative; */
+      max-width: 700px;
+      width: 100%;
+      background-color: var(--facilities-bg);
+      padding:  25px;
+      border-radius: 8px;
+      box-shadow: 0 0 7px black;
+}
+/* .register-div h2{
+      font-size: 1.5rem;
+
+} */
+.register-div .register-form{
+      margin-top: 30px;
+}
+.register-form .input-box{
+      width: 100%;
+      margin-top: 20px;
+}
+.register-form .input-box label{
+      font-size: 1.2rem;
+      font-family: var(--font3);
+}
+.register-form .input-box input,select,textarea{
+      /* position: relative; */
+      width: 100%;
+      height: 50px;
+      outline: none;
+      border: 1px solid #111;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 5px;
+      font-weight: 500;
+      font-family: var(--font2);
+      font-size: 0.9rem;
+}
+.register-form .input-box textarea{
+      height: 80px;
+      }
+.register-form .inputbox-col{
+     column-gap: 15px;
+}
+
+
+.register-form .error{
+      margin-top: 8px;
+      font-size: 17px;
+      color: #d93025;
+      display: none;
+}
+
+.invalid .error{
+      display: flex;
+}
+.invalid input{
+      border-color:#d93025 ;
+}
+
+.error .error-icon {
+      margin-right: 7px;
+      font-size: 17px;
+}
+
+.password-error .error-icon {
+      margin-top: 3px;
+}
+
+.input-pass {
+      position: relative;
+     
+}
+.inputfield-pass{
+      width: 50%;
+}
+
+.input-pass .show-hide {
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      /* transform: translateY(-150%); */
+      font-size: 18px;
+      color: #919191;
+      cursor: pointer;
+      padding: 5px;
+
+}
+
+
+.register-form button{
+      width:100%;
+      height:55px;
+      margin-top:20px;
+      padding:3px;
+      font-size: 1.1rem;
+}
+
+.register-message{
+      background-color: red;
+      color: white!important;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      
+       /* position: relative; */
+}
+.register-message a i{
+      font-size: 27px;
+      margin-top: 5px;
+      color: white;
+}
+.none{
+      display: none;
+}
+
+
+
+
+/* login */
+
+.login-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: calc(100vh-140px); */
+      padding: 20px;
+      background-color: var(--register-bg);
+}
+.login-div{
+  
+      margin-block: 42px;
+      /* position: relative; */
+      max-width: 450px;
+      width: 100%;
+      background-color: var(--facilities-bg);
+      padding:  25px;
+      border-radius: 8px;
+      box-shadow: 0 0 7px black;
+}
+.login-div .login-form{
+      margin-top: 30px;
+}
+.login-form .input-box{
+      width: 100%;
+      margin-top: 20px;
+}
+.login-form .input-box label{
+      font-size: 1.2rem;
+      font-family: var(--font3);
+}
+.login-form .input-box input{
+      /* position: relative; */
+      width: 100%;
+      height: 50px;
+      outline: none;
+      border: 1px solid #111;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 5px;
+      font-weight: 500;
+      font-family: var(--font2);
+      font-size: 0.9rem;
+}
+.login-form button{
+      width:100%;
+      height:55px;
+      margin-top:20px;
+      padding:3px;
+      font-size: 1.1rem;
+}
+
+
+
+
+
+@media screen and (max-width:550px){
+      .register-form .inputbox-col{
+            flex-wrap: wrap;
+      }
+      .register-form .inputbox-col .input-box select{
+            width: 100%;
+      }
+      
+      .inputfield-pass{
+            width: 100%;
+      }
+}

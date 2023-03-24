@@ -1,0 +1,138 @@
+.contact-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(/img/contact-bg.jpg) no-repeat center center/cover;
+
+      padding: 44px 0;
+      color: white !important;
+      /* height: 83.1vh; */
+      /* overflow: hidden; */
+}
+
+.contact-section p {
+      color: white !important;
+}
+
+.contact-container {
+      justify-content: space-around;
+      
+}
+
+.contact-form {
+      color: white !important;
+      width: 400px;
+      margin: 20px 0;
+      position: relative;
+      /* top: 50%;
+      transform: translateY(-50%); */
+      padding: 20px;
+      background-color: #ffffff33;
+      /* backdrop-filter: blur(4px); */
+      border-radius: 10px;
+      box-shadow: 0 0 8px 1px black;
+      /* z-index: 2; */
+}
+
+.contact-form p {
+      margin: 10px 5px;
+
+
+}
+.contact-form h2{
+      padding-left: 2px;
+}
+
+.contact-form p label {
+      display: block;
+      margin-top: 5px;
+      font-weight: bold;
+
+      /* margin-left: 2px; */
+}
+
+.contact-form p input,
+textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #dddd;
+      border-radius: 5px;
+      font-size: 1em;
+      margin-top: 5px;
+      font-family: var(--font4);
+}
+
+
+.contact-form p button[type="submit"] {
+      /* background-color: #3498db; */
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.3s ease-in-out;
+}
+
+.contact-form p button[type="submit"]:hover {
+      background-color: var(--accent-color-dark);
+}
+
+
+.contact-info-box {
+      gap: 4%;
+      padding: 23px 0;
+      word-break: break-all;  
+}
+
+
+.contact-text h3 {
+      color: aqua;
+}
+
+.contact-icon {
+      /* text-align: center; */
+      font-size: 25px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      color: black;
+}
+/* .contact-icon-mail{
+    width: 62px;
+} */
+
+
+
+
+@media screen and (max-width:900px) {
+      .contact-container{
+            flex-direction: column;
+      }
+      .contact-info{
+            width: 100%;
+            margin-top: 10px;
+      }
+      .contact-form{
+            width: 100%;
+            padding: 9px;
+      }
+      .contact-section{
+            padding: 30px;
+      }
+      .contact-content h2,p{
+
+            padding: 4px 0;
+            /* text-align: left; */
+      }
+      .contact-form p input,
+textarea,label{
+      
+      /* padding: 6px; */
+     
+      
+      margin-top: 4px;
+     
+}
+/* .max-width{
+      max-width: 96vw;
+} */
+
+}

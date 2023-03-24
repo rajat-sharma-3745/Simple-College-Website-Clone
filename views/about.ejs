@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%=title%> </title>
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/utils.css">
+      <link rel="stylesheet" href="css/about.css">
+      <link rel="stylesheet" href="css/mobile.css">
+      <link rel="icon" type="image/x-icon" href="/img/clglogo.png">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="" id="body">
+      <div class="loader" id="loader">
+            <div>
+      
+            </div>
+          </div>
+          <%-include("../partials/topbanner")%>
+          <%-include("../partials/header")%>
+
+      <section class="aboutus">
+            <div class="max-width mx-auto">
+                  <h1 class="text-center text-bold py-1">About us</h1>
+                  <div class="about-container flex items-center my-2 py-1">
+                        <div class="about-left">
+                              <p>
+                                    Govt Post-Graduate College Bilaspur is one of the oldest and amongst the most prestigious colleges of Himachal Pradesh, Established in 1952. It has remained instrumental in providing quality education to the people of the town and adjoining areas. Nestled below the imposing Bandla hills on the left bank of the world famous Gobind Sagar Lake, college campus presents ideal surroundings for scholarly pursuits. Over the past sixty years the college has established a glorious record of academic excellence and has made remarkable achievements in various fields such as sports, cultural & extracurricular activities.
+                                    The college is affiliated to Himachal Pradesh University and has been accredited B grade by NAAC. It is a matter of pride that H.P. University has notified this college as one of the five best colleges amongst more than hundred colleges of state affiliated to it. It has the honour to be designated as the ‘Star College in Life Sciences’ by UGC.
+
+                              </p>
+                        </div>
+                        <div class="about-right">
+                              <img src="img/aboutus1.jpg" alt="">
+                        </div>
+
+                  </div>
+                  <h1 class="text-center text-bold py-1">Vision and Mission</h1>
+                  <div class="vision-container flex items-center my-2">
+                        <div class="vision"data-aos="zoom-in"
+                        >
+                           <h2 class="text-center ">Our Vision</h2>
+                           <p class="text-center">College provides students with quality educational experiences and support services that lead to the successful completion of degrees, transfer, certificates, career/technical education and basic skills proficiency.</p>
+                        </div>
+                        <div class="mission" data-aos="zoom-in"
+                        >
+                           <h2 class="text-center ">Our Mission</h2>
+                           <p class="text-center">Our College is driven to provide excellent educational opportunities that are responsive to the needs of our students, and empower them to meet and exceed challenges as active participants in shaping the future of our world.</p>
+                        </div>
+                        
+                  </div>
+            </div>
+      </section>
+
+      <%-include("../partials/footer")%>
+
+
+
+
+      <%-include("../partials/loaderscript")%>
+
+
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script src="https://kit.fontawesome.com/23ed0aa629.js" crossorigin="anonymous"></script>
+      <script src="js/main.js"></script>
+</body>
+
+</html>

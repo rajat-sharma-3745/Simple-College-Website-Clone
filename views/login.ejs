@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login | Govt PG College Bilaspur</title>
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/utils.css">
+      <link rel="stylesheet" href="css/register-login.css">
+      <link rel="stylesheet" href="css/mobile.css">
+      <link rel="icon" type="image/x-icon" href="/img/clglogo.png">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+</head>
+
+<body class="" id="body">
+      <div class="loader" id="loader">
+            <div>
+
+            </div>
+      </div>
+      <%-include("../partials/topbanner")%>
+      <%-include("../partials/header")%>
+
+
+      <section class="login-container">
+            <!-- body -->
+            <div class="login-div ">
+                  <!-- container -->
+                  <h2 class="text-bold text-center "> Login</h2>
+                  <form action="/loginn" method="post" class="login-form">
+                        <div class="text-bold text-center register-message flex " id="register-message">
+                              <h3 id="register-h3">
+                                    <%=message%>
+                              </h3>
+                              <a href="#"
+                                    onclick="document.getElementById('register-message').style.display='none' ">
+                                    <i class="fa-sharp fa-solid fa-xmark"></i></a>
+                        </div>
+                        <div class="input-box">
+                              <label for="email">E-mail</label>
+                              <input type="text" name="email" id="email" placeholder="Enter your E-mail" required>
+                        </div>
+
+
+
+
+                        <div class="input-box input-pass login-pass">
+                              <label for="password">Password</label>
+                              <input type="password" name="password" id="password" placeholder="Enter your password"
+                                    required>
+                                    <i class="fa-regular fa-eye-slash show-hide"></i>
+                        </div>
+
+
+                        <button type="submit" class="primary-button">Login</button>
+                        <h5 class="text-center py-1">Dont have a account?<a href="/register">Register</a> </h5>
+
+                  </form>
+            </div>
+      </section>
+
+
+
+
+
+
+
+
+
+      <%-include("../partials/footer")%>
+      <%-include("../partials/loaderscript")%>
+<script>
+      const registermessage = document.getElementById('register-message')
+                                    if ("<%=message%>" == "") {
+                                          registermessage.style.display = "none"
+                                    }
+</script>
+      <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+            AOS.init();
+      </script> -->
+
+      <script src="https://kit.fontawesome.com/23ed0aa629.js" crossorigin="anonymous"></script>
+      <script src="js/main.js"></script>
+      <script>
+            const eyeicon =document.querySelector(".show-hide")
+             eyeicon.addEventListener('click',()=>{
+                        const pinput=eyeicon.parentElement.querySelector("input")
+                       if(pinput.type==="password")
+                       {
+                        eyeicon.classList.remove("fa-eye-splash");
+                        eyeicon.classList.add("fa-eye");
+                        return pinput.type="text"
+                       } 
+                       eyeicon.classList.add("fa-eye-splash");
+                        eyeicon.classList.remove("fa-eye");
+                        return pinput.type="password"
+                  })
+      </script>
+
+</body>
+
+</html>

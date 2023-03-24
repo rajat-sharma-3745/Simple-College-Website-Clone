@@ -1,0 +1,31 @@
+.description , .faculty, .eligibility{
+
+      background-color: var(--course-card-bg);
+      /* #DDF7E3 */
+      padding: 16px 21px;
+      border-radius: 16px;
+      box-shadow: 0 0 4px gray;
+     
+}
+.description:hover{
+      transform: scale(1.01); 
+}
+.faculty:hover{
+      /* background-color: #B9F3FC; */
+      transform: scale(1.01); 
+}
+.eligibility:hover{
+      /* background-color: #F9B5D0;  */
+      transform: scale(1.01); 
+}
+.description h2, .faculty h2, .eligibility h2{
+      margin-bottom: 8px;
+}
+
+
+
+@media screen and (max-width:600px) {
+      .course-information h1{
+            padding-block: 5px;
+      }
+}

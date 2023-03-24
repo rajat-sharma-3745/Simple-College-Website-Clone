@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%=title%> </title>
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/utils.css">
+      <link rel="stylesheet" href="css/contact.css">
+      <link rel="stylesheet" href="css/mobile.css">
+      <link rel="icon" type="image/x-icon" href="/img/clglogo.png">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="" id="body">
+      <div class="loader" id="loader">
+            <div>
+      
+            </div>
+          </div>
+          <%-include("../partials/topbanner")%>
+          <%-include("../partials/header")%>
+
+      <section class="contact-section ">
+            <div class="max-width mx-auto">
+                  <div class="contact-content ">
+                        <h2 class="text-center py-1 ">We'd love to hear from you</h2>
+                        <p class="text-center ">Whether you have a question about courses, pricing, or anything else, our
+                              team is always
+                              there to answer all your queries</p>
+                  </div>
+                  <div class="contact-container flex flex-rev   items-center ">
+                        <div class="contact-info">
+                              <div class="contact-info-box flex  items-center">
+                                    <div class="contact-icon flex  items-center justify-center">
+                                          <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                          <h3>Address</h3>
+                                          <p>Bilaspur 174001 <br> Himachal Pradesh</p>
+                                    </div>
+                              </div>
+                              <div class="contact-info-box flex  items-center">
+                                    <div class="contact-icon flex  items-center justify-center">
+                                          <i class="fa-solid  fa-phone " id="phone"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                          <h3>Phone</h3>
+                                          <p>01978222417</p>
+                                    </div>
+                              </div>
+                              <div class="contact-info-box flex items-center">
+                                    <div class="contact-icon contact-icon-mail flex items-center justify-center">
+                                          <i class=" fa-solid fa-paper-plane"></i>
+                                    </div>
+                                    <div class="contact-text" >
+                                           <h3>E-mail</h3>
+                                          <p >principalgpgcbilaspur@gmail.com</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="contact-form">
+                              <h2>Send Message</h2>
+                              <form action="https://formspree.io/f/mknajvbd" method="POST" id="mycontactform" onsubmit="formreset()" >
+                                    <p>
+                                          <label for="fullname">Full Name</label>
+                                          <input type="text" id="fullname" placeholder="Enter your name " name="Name">
+
+                                    </p>
+                                    <p>
+                                          <label for="email">Your Email</label>
+                                          <input type="email" id="email" placeholder="Enter your email " name="Email">
+
+                                    </p>
+                                    <p>
+                                          <label for="Message">Message</label>
+                                          <textarea name="Message" id="Message" placeholder="Your message" rows="3" name="Message"></textarea>
+
+                                    </p>
+                                    <p>
+                                         <button type="submit" class="primary-button" >Send</button>
+                                    </p>
+
+                              </form>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+
+
+
+
+      <!-- <footer>
+            <div class="max-width mx-auto flex justify-center items-center">
+                  <h4 class=" py-1 items-center text-center text-bold">Copyright &copy; abc.com|ALL RIGHTS RESERVED.
+                  </h4>
+            </div>
+      </footer> -->
+
+
+
+      <%-include("../partials/loaderscript")%>
+
+
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script src="https://kit.fontawesome.com/23ed0aa629.js" crossorigin="anonymous"></script>
+      <script src="js/main.js"></script>
+</body>
+
+</html>

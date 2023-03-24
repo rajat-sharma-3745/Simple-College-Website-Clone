@@ -1,0 +1,395 @@
+@media screen and (max-width:1100px) {
+      li {
+            margin-inline: 5px;
+      }
+
+      .top-banner-container {
+            margin-block: 11px;
+      }
+      .email p {
+            display: none;
+      }
+      .Phone p {
+            display: none;
+      }
+}
+
+@media screen and (max-width:1024px) {
+      .max-width {
+            max-width: 85vw;
+      }
+      .course-card {
+            width: 44%;
+            /* gap: 20%; */
+            padding-inline: 20px;
+      }
+.row{
+      gap: 30px;
+}
+      .campuscol {
+            width: 46%;
+      }
+
+      .courses {
+            gap: 30px;
+      }
+      /* .fac-img1 img{
+            width: 370px;
+      }
+      .fac-img2 img{
+            width: 300px;
+      } */
+      
+      h4 {
+            font-size: 1.1rem;
+
+      }
+}
+
+@media screen and (max-width:910px) {
+      .max-width {
+            max-width: 87vw;
+      }
+
+      h1 {
+            font-size: 1.9rem;
+
+      }
+
+      h2 {
+            font-size: 1.5rem;
+
+      }
+
+      h3 {
+            font-size: 1.2rem;
+
+      }
+
+      h4 {
+            font-size: 1rem;
+
+      }
+      .theme{
+            gap: 4px;
+      }
+      /* .theme h4{
+            padding-top: 3px;
+      } */
+      .navlinks ul li a{
+            
+            padding-inline: 3.4px;
+      }
+
+}
+
+@media screen and (max-width:830px) {
+
+      /* .clg-logo img {
+            padding-top: 4px;
+            width: 5vw ;
+      } */
+      .top-banner-container {
+            /* flex-direction: column; */
+            margin-block: 5.5px;
+            /* margin-bottom:10px; */
+      }
+      .email {
+            display: none;
+      }
+
+      .Phone {
+            display: none;
+      }
+
+      .nav-toggle {
+            display: block;
+      }
+
+      .clginfo-toggle {
+            display: block;
+            margin-top: 2.7%;
+      }
+
+      header {
+            /* overflow: initial; */
+            /* position: relative; */
+            padding-block: 0.8rem;
+      }
+
+      .navlinks ul {
+            flex-direction: column;
+            gap: 5px;
+      }
+
+      .navlinks {
+            /* margin-top: 10px; */
+            position: absolute;
+            top: 100%;
+            left: -100%;
+            width: 100%;
+            /* height: 50vh; */
+            padding-block: 40px;
+            background-color:var(--bg);
+            text-align: center;
+            
+            /* z-index: 1; */
+            transition: 0.2s ease-out;
+      }
+      .clg-logo {
+            
+            padding-left: 5px;
+      }
+      
+
+      .clg-info {
+           position: absolute;
+            top:94%;
+            left: -100%;
+            width: 100%;
+            /* margin-top: 20px; */
+           /* padding-bottom:14px; */
+            color: var(--primary-text-color);
+            background-color:var(--bg);
+            border-top: 0.2px solid gray;
+            justify-content:space-evenly;
+            padding-top: 2.5px;
+      }
+
+      .clg-info.active1 {
+            left: 0;
+            /* z-index: 1; */
+            }
+     
+
+      .navlinks.active {
+            left: 0;
+            z-index: 5;
+      }
+
+      .course-card {
+            width: 85%;
+            gap: 4px;
+            /* border-bottom: 0.8px solid black; */
+      }
+
+      .campuscol {
+            width: 100%;
+            align-self: center;
+            margin-bottom: 5px;
+      }
+
+      .campuscol img {
+            max-width: 680px;
+      }
+      .facilities-row{
+            flex-direction: column;
+            align-items:center;
+            text-align: center;
+      }
+      .facilities-right{
+            width: 82vw;
+            gap: 5px;
+      }
+      .testimonial-container{
+            flex-direction: column;
+            margin-block: 3px;
+            padding: 0 10px;
+      }
+      .testimonials-div>p,.testimonials-div h1{
+            padding-bottom: 30px;
+            padding-inline: 5px;
+      }
+      /* .theme h4{
+            padding-top: 3px;
+      } */
+      .theme {
+          
+            padding-right: 2px;
+      }
+}
+
+@media screen and (max-width:750px) {
+      h1 {
+            font-size: 1.5rem;
+
+      }
+
+      h2 {
+            font-size: 1.3rem;
+
+      }
+
+      h3 {
+            font-size: 1rem;
+
+      }
+
+      h4 {
+            font-size: 0.9rem;
+
+      }
+
+      .top-banner-container {
+            /* flex-direction: column; */
+            margin-block: 4px;
+            /* margin-bottom:10px; */
+      }
+
+      .clg-logo {
+            /* width: 40vw;    */
+            gap: 5px;
+            align-self: center;
+            padding: 4px 0;
+            padding-left: 4px;
+      }
+
+      
+
+      .logo-text h2 {
+            font-size: 1.1rem;
+      }
+
+      .nav-toggle {
+            padding-top: 2px;
+      }
+
+      /* .theme h4 {
+            padding-top: 7px;
+      } */
+
+      .section1-left {
+            padding-block: 180px;
+            width: 72vw;
+      }
+
+      .theme {
+            gap: 4px;
+      }
+
+      .clg-logo img {
+            width: 37px;
+      }
+
+      .course-card {
+            width: 100%;
+            /* border-bottom: 0.8px solid black; */
+      }
+      /* .fac-img1 img{
+            width: 300px;
+      } 
+      .fac-img2 img{
+            width: 350px;
+      }*/
+      
+      .clginfo-toggle {
+           
+            margin-top: 3%;
+      }
+      p{
+            line-height: 1rem;
+            font-family: var(--font1);
+      }
+      .cta-div{
+            gap: 9px;
+            padding: 60px 10px;
+      }
+      .fac-img2 img{
+            padding: 60px 0;
+            /* width: 550px; */
+      } 
+
+
+      /* .campuscol{
+            align-self: center;
+          }
+          .campuscol img{
+             width: 100%;
+            /* height: auto; */
+      /* max-width: 260px; 
+          }*/
+          .max-width {
+            max-width: 91vw;
+      }
+
+}
+@media screen and (max-width:550px){
+      /* .fac-img1 img{
+            width: 240px;
+      } */
+      .fac-img2 img{
+            width: 290px;
+            /* padding-top: 8px; */
+      }  
+      .course-container{
+      
+            
+            padding: 0 10px;
+      } 
+      .achievements{
+            justify-content: space-evenly;
+          
+      }
+      .achieve-col{
+            width: 40%;
+      }
+      .clginfo-toggle {
+           
+            margin-top:4.15%;
+      }
+      header{
+            /* padding-top: 5px;
+            padding-bottom: 5px; */
+            padding-block: 0.4rem;
+      }
+      /* .theme h4 {
+            padding-top: 6px;
+            
+      } */
+      .my-2{
+            margin-block: 1.1rem;
+      }
+      .facilities-container{
+            padding-top: 1px;
+      }
+      /* .facilities-row{
+            border-bottom: 0.4px dashed black;
+      } */
+      .section1-left {
+            padding-block: 140px;
+            /* width: 75vw; */
+      }
+      .fac-img2 img{
+            padding-block: 30px;
+            /* width: 550px; */
+      } 
+      .clg-logo{
+            padding-left: 0.7px;
+      }
+
+} 
+@media screen and (max-width:390px) {
+
+      .clginfo-toggle {
+           
+            margin-top: 5.5%;
+      }
+      .section1-left {
+            padding-block: 105px;
+            /* width: 75vw; */
+      }
+      .fac-img2 img{
+            width: 250px;
+      }
+      .logo-text h2{
+            font-size:1.069rem ;
+      }
+      #login{
+            padding: 0.4px 4px;
+            margin-left:17px;
+            /* font-weight: 200; */
+      }
+      .theme>a i{
+            margin-top: 8px;
+      }
+}
