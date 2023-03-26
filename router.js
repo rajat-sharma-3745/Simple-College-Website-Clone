@@ -8,12 +8,12 @@ const multer = require('multer');
 const path = require('path');
 require('dotenv/config');
 
-console.log(path.join("https://college-site-project.onrender.com/public/userimages"))
+// console.log(path.join("https://college-site-project.onrender.com/public/userimages"))
 
 const storage = multer.diskStorage({
       destination: function (req, file, cb) {
-            cb(null, path.join("https://college-site-project.onrender.com/public/userimages"));
-            // cb(null, path.join(__dirname,"./public/userimages"));
+           
+            cb(null, path.join(__dirname,"./public/userimages"));
       },
       filename: function (req, file, cb) {
             const imagename = Date.now() + '-' + file.originalname;
