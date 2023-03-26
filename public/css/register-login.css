@@ -195,6 +195,10 @@
             width: 100%;
       }
       #register-h3{
+            font-size: 1.1rem;
+            padding-top: 2.5px;
+      }
+      .register-div h2,.login-div h2{
             font-size: 1.2rem;
       }
 }
