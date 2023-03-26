@@ -53,7 +53,7 @@ const sendVerfiyMail = async (firstname, email, user_id) => {
                   from: "sharmarajat3745@gmail.com",
                   to: email,
                   subject: "For verification purpose",
-                  html: "<p>Hi " + firstname + ", Please click here to <a href=https://college-site-project.onrender.com/verify?id=" + user_id + ">verify</a> your mail</p>"
+                  html: "<p>Hi " + firstname + ",Thanks for signing up with us! You must follow this link of registration to activate your account: Please click here to <a href=https://college-site-project.onrender.com/verify?id=" + user_id + ">verify</a> your mail<br>Thank you</p>"
             }
             transporter.sendMail(mailOptions, function (error, info) {
                   if (error) {
