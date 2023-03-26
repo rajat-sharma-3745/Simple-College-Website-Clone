@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,50 +12,57 @@
       <link rel="icon" type="image/x-icon" href="/img/clglogo.png">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
       <style>
-            .userdetail-div{
+            .userdetail-div {
                   overflow-x: auto;
             }
-            #userdetail{
+
+            #userdetail {
                   width: 100%;
                   border-collapse: collapse;
                   /* box-shadow: 0 4px 7px black; */
-                  }
-            #userdetail td{
+            }
+
+            #userdetail td {
                   font-size: large;
                   font-weight: 600;
                   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                   border: 2px solid #777222;
                   /* border-radius: 8px; */
-                   padding: 10px 15px;
+                  padding: 10px 15px;
             }
-            @media screen  and (max-width:600px){
-                  #userdetail td{
-                  font-size: small;
-                  font-weight: 400;
-                  
-                   padding: 7px;
-            } 
-            .max-width1{
-                  max-width: 92vw;
+
+            @media screen and (max-width:600px) {
+                  #userdetail td {
+                        font-size: small;
+                        font-weight: 400;
+
+                        padding: 7px;
+                  }
+
+                  .max-width1 {
+                        max-width: 92vw;
+                  }
             }
-            }
+
             /* #userdetail tr:nth-child(even){
                   background-color: #ddd;
             } */
             /* #userdetail tr:nth-child(odd){
                   background-color: #F1F7B5;
             } */
-            #userdetail tr:hover{
+            #userdetail tr:hover {
                   background-color: orange;
             }
-            .userdetail-section span{
+
+            .userdetail-section span {
                   background-color: orange;
                   color: white;
                   padding: 5px;
                   border-radius: 10px;
             }
-            </style>
+      </style>
 </head>
+
 <body class="" id="body">
       <div class="loader" id="loader">
             <div>
@@ -62,86 +70,107 @@
             </div>
       </div>
       <%-include("../partials/topbanner")%>
-      <%-include("../partials/header")%>
-
-
-   
-
-
-
-      <section class="userdetail-section max-width1 mx-auto">
-            <div class="userimage flex items-center " style="column-gap: 8px;" >
-                  <img src="userimages/<%=user.image%>" class="my-1" alt="" style="width: 70px; height: 70px; border-radius: 50%;">
-                  <h1 class="py-2">Welcome <Span id="user-title"><%= user.firstname%></Span></h1>
-            </div>
-            <div class=" userdetail-div">
-                  <table id="userdetail">
-                        <tr>
-                              <td>Full Name</td>
-                              <td><%= user.firstname%> <%= user.lastname%></td>
-                        </tr>
-                        <tr>
-                              <td>Email</td>
-                              <td><%= user.email%></td>
-                        </tr>
-                        <tr>
-                              <td>Phone</td>
-                              <td><%= user.phone%></td>
-                        </tr>
-                        <tr>
-                              <td>Dob</td>
-                              <td><%= user.dob%></td>
-                        </tr>
-                        <tr>
-                              <td>Age</td>
-                              <td><%= user.age%></td>
-                        </tr>
-                        <tr>
-                              <td>Gender</td>
-                              <td><%= user.gender%></td>
-                        </tr>
-                        <tr>
-                              <td>Course</td>
-                              <td><%= user.course%></td>
-                        </tr>
-                        <tr>
-                              <td>Address</td>
-                              <td><%= user.address%></td>
-                        </tr>
-                  </table>
-            </div>
-          </section>
+            <%-include("../partials/header")%>
 
 
 
 
 
-      <!-- <%-include("../partials/footer")%> -->
-      <%-include("../partials/loaderscript")%>
 
-      
+                  <section class="userdetail-section max-width1 mx-auto">
+                        <div class="userimage flex items-center " style="column-gap: 8px;">
+                              <img src="userimages/<%=user.image%>" class="my-1" alt=""
+                                    style="width: 70px; height: 70px; border-radius: 50%;">
+                              <h1 class="py-2">Welcome <Span id="user-title">
+                                          <%= user.firstname%>
+                                    </Span></h1>
+                        </div>
+                        <div class=" userdetail-div">
+                              <table id="userdetail">
+                                    <tr>
+                                          <td>Full Name</td>
+                                          <td>
+                                                <%= user.firstname%>
+                                                      <%= user.lastname%>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                          <td>Email</td>
+                                          <td>
+                                                <%= user.email%>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                          <td>Phone</td>
+                                          <td>
+                                                <%= user.phone%>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                          <td>Dob</td>
+                                          <td>
+                                                <%= user.dob%>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                          <td>Age</td>
+                                          <td>
+                                                <%= user.age%>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                          <td>Gender</td>
+                                          <td>
+                                                <%= user.gender%>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                          <td>Course</td>
+                                          <td>
+                                                <%= user.course%>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                          <td>Address</td>
+                                          <td>
+                                                <%= user.address%>
+                                          </td>
+                                    </tr>
+                              </table>
+                        </div>
+                  </section>
 
-      <script src="https://kit.fontawesome.com/23ed0aa629.js" crossorigin="anonymous"></script>
-      <script src="js/main.js"></script>
-      <script>
-            let usertitle=document.getElementById('user-title');
-          let text=usertitle.innerText;
-          console.log(text)
-          let index=0;
 
-     const typewriter=()=>{
-         let newtext= text.slice(0,index);
-         usertitle.innerText=newtext
-          index++;
-          setTimeout(()=>{
-            typewriter()
-          },400)
-     }
- typewriter();
 
-        
 
-      </script>
+
+                  <script>
+                        let usertitle = document.getElementById('user-title');
+                        let text = usertitle.innerText;
+                        console.log(text)
+                        let index = 0;
+
+                        const typewriter = () => {
+                              let newtext = text.slice(0, index);
+                              usertitle.innerText = newtext
+                              index++;
+                              setTimeout(() => {
+                                    typewriter()
+                              }, 400)
+                        }
+                        typewriter();
+
+
+
+                  </script>
+                  <!-- <%-include("../partials/footer")%> -->
+                  <%-include("../partials/loaderscript")%>
+
+
+
+                        <script src="https://kit.fontawesome.com/23ed0aa629.js" crossorigin="anonymous"></script>
+                        <script src="js/main.js"></script>
 
 </body>
+
 </html>

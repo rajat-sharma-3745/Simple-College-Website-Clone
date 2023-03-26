@@ -1,68 +1,68 @@
 const express = require("express");
 const Router = express.Router();
 const usermodel = require("./database");
-const bcrypt  =require('bcrypt');
-const nodemailer=require('nodemailer');
+const bcrypt = require('bcrypt');
+const nodemailer = require('nodemailer');
 
-const multer=require('multer');
-const path=require('path');
+const multer = require('multer');
+const path = require('path');
 require('dotenv/config');
 
+// console.log(path.join("/public/userimages"))
 
-
-const storage=multer.diskStorage({
-      destination:function(req,file,cb){
-cb(null,path.join(__dirname,"./public/userimages"));
+const storage = multer.diskStorage({
+      destination: function (req, file, cb) {
+            cb(null, "./public/userimages");
       },
-      filename:function(req,file,cb){
-            const imagename=Date.now()+'-'+file.originalname;
-cb(null,imagename);
+      filename: function (req, file, cb) {
+            const imagename = Date.now() + '-' + file.originalname;
+            cb(null, imagename);
       }
 })
-const upload=multer({storage:storage});
+const upload = multer({ storage: storage });
 
 
 //for encrypting password by hashing
-const securepassword =async(password)=>{
+const securepassword = async (password) => {
       try {
-           const passhash=await bcrypt.hash(password,10);
-           return passhash; 
+            const passhash = await bcrypt.hash(password, 10);
+            return passhash;
       } catch (error) {
             console.log(error.message);
       }
 }
 
 //sending verify mail
-const sendVerfiyMail=async(firstname,email,user_id)=>{
+const sendVerfiyMail = async (firstname, email, user_id) => {
       try {
-            const transporter=nodemailer.createTransport({
-                  service:"gmail",
-                  host:"smtp.google.com",
+            const transporter = nodemailer.createTransport({
+                  service: "gmail",
+                  host: "smtp.google.com",
                   // port:587,
-                  secure:false,
-                  requireTLS:true,
-                  auth:{
-                        user:"sharmarajat3745@gmail.com",
-                        pass:"avuydpdpyxqxcage"
+                  secure: false,
+                  requireTLS: true,
+                  auth: {
+                        user: "sharmarajat3745@gmail.com",
+                        pass: "avuydpdpyxqxcage"
                   }
-                  , tls:{
-                        rejectUnauthorized:false
-                    }
+                  , tls: {
+                        rejectUnauthorized: false
+                  }
             })
-            const mailOptions={
-                  from:"sharmarajat3745@gmail.com",
-                  to:email,
-                  subject:"For verification purpose",
-                  html:"<p>Hi "+firstname+", Please click here to <a href=https://college-site-project.onrender.com/verify?id="+user_id+">verify</a> your mail</p>"
+            const mailOptions = {
+                  from: "sharmarajat3745@gmail.com",
+                  to: email,
+                  subject: "For verification purpose",
+                  html: "<p>Hi " + firstname + ", Please click here to <a href=https://college-site-project.onrender.com/verify?id=" + user_id + ">verify</a> your mail</p>"
             }
-              transporter.sendMail(mailOptions,function(error,info){
-                  if(error){
-                        console.log("email not sent"+error.message)
+            transporter.sendMail(mailOptions, function (error, info) {
+                  if (error) {
+                        console.log("email not sent" + error.message)
                   }
-                  else{
-                        console.log("email has been sent "+info.response);
+                  else {
+                        console.log("email has been sent " + info.response);
                   }
-              })
+            })
 
       } catch (error) {
             console.log(error.message);
@@ -72,103 +72,102 @@ const sendVerfiyMail=async(firstname,email,user_id)=>{
 
 
 //for verify mail
-const verifyMail=async(req,res)=>{
+const verifyMail = async (req, res) => {
       try {
-       const updateinfo = await usermodel.updateOne({_id:req.query.id},{$set:{ is_verified:1 }});
-// console.log(updateinfo);
-       res.render("email-verified");  
+            const updateinfo = await usermodel.updateOne({ _id: req.query.id }, { $set: { is_verified: 1 } });
+            // console.log(updateinfo);
+            res.render("email-verified");
       } catch (error) {
             console.log(error.message)
       }
 }
-Router.post('/registerr', upload.single('image'),async(req, res) => {
+Router.post('/registerr', upload.single('image'), async (req, res) => {
       try {
             // const { firstname,lastname, email,image, phone, dob,age,gender, course, address, password, confpassword } = req.body;
-            const checkmail=req.body.email;
-            const password=req.body.password;
-            const confpassword=req.body.confpassword;
+            const checkmail = req.body.email;
+            const password = req.body.password;
+            const confpassword = req.body.confpassword;
             // console.log(checkmail)
-            const databasedata= await usermodel.findOne({email:checkmail})
-            
-            const spassword= await securepassword(req.body.password);
+            const databasedata = await usermodel.findOne({ email: checkmail })
 
-          
+            const spassword = await securepassword(req.body.password);
+
+
             if (password === confpassword && databasedata === null) {
                   const data = new usermodel({
-                        firstname:req.body.firstname,
-                        lastname:req.body.lastname,
-                        email:req.body.email,
-                        image:req.file.filename,
-                        phone:req.body.phone,
-                        dob:req.body.dob,
-                        age:req.body.age,
-                        gender:req.body.gender,
-                        course:req.body.course,
-                        address:req.body.address,
-                        password:spassword
+                        firstname: req.body.firstname,
+                        lastname: req.body.lastname,
+                        email: req.body.email,
+                        image: req.file.filename,
+                        phone: req.body.phone,
+                        dob: req.body.dob,
+                        age: req.body.age,
+                        gender: req.body.gender,
+                        course: req.body.course,
+                        address: req.body.address,
+                        password: spassword
                   }
                   );
                   const savedata = await data.save();
                   // res.redirect("login")
 
-                  if(savedata)
-                  {   
-                        sendVerfiyMail(req.body.firstname,req.body.email,savedata._id);
+                  if (savedata) {
+                        sendVerfiyMail(req.body.firstname, req.body.email, savedata._id);
                         res.render("register", { message: "Registration successfull | Please verify your Mail..." })
                   }
-                  else{
+                  else {
                         res.render("register", { message: "Registration Failed...." })
 
                   }
             }
-            else if(checkmail === databasedata.email){
+            else if (checkmail === databasedata.email) {
                   res.render("register", { message: "Email  already exist" })
-                  
+
             }
-          
+
             // else if(password !== confpassword){
             //       res.render("register", { message: "Password doesnot match" })
             // }
-            else{
+            else {
                   res.send("Some error Occured Go back");
             }
-         } catch (error) {
+      } catch (error) {
             // res.send("error catch "+error);
             res.render('error');
       }
 })
 
 
-Router.post('/loginn',async(req,res)=>{
+Router.post('/loginn', async (req, res) => {
       try {
-            const email=req.body.email;
-            const password=req.body.password;
-            const databasedata= await usermodel.findOne({email:email}); 
-            if(databasedata){
-                  const passwordmatch= await bcrypt.compare(password,databasedata.password)
-                if (passwordmatch) {
-                  if (databasedata.is_verified===0) {
-                        
-                        res.render("login",{message:"Please verify your email"});  
-                  } else {
-                       
+            const email = req.body.email;
+            const password = req.body.password;
+            const databasedata = await usermodel.findOne({ email: email });
+            if (databasedata) {
+                  const passwordmatch = await bcrypt.compare(password, databasedata.password)
+                  if (passwordmatch) {
+                        if (databasedata.is_verified === 0) {
 
-                      
-                        res.render("userdetail",{user:databasedata})
-                        
+                              res.render("login", { message: "Please verify your email" });
+                        } else {
+
+
+
+                              res.render("userdetail", { user: databasedata })
+
+                        }
+                  } else {
+                        res.render("login", { message: "Invalid Email or Password" });
                   }
-                } else {
-                  res.render("login",{message:"Invalid Email or Password"});
-                }
             }
-            else{
-                  res.render("login",{message:"Invalid Email or Password"});
+            else {
+                  res.render("login", { message: "Invalid Email or Password" });
             }
             // res.send(databasedata)
             // console.log(databasedata)
       } catch (error) {
-      //    res.send(error) 
-      res.render('error');  
+            //    res.send(error) 
+            res.render('error');
       }
 
 })
@@ -192,19 +191,19 @@ Router.get("/gallery", (req, res) => {
 Router.get("/contact", (req, res) => {
       res.render("contact", { title: "Contact | Govt PG College Bilaspur" })
 })
-Router.get("/login",(req, res) => {
-      res.render("login",{message:""})
+Router.get("/login", (req, res) => {
+      res.render("login", { message: "" })
 })
-Router.get("/register",(req, res) => {
-      res.render("register",{message:""})
+Router.get("/register", (req, res) => {
+      res.render("register", { message: "" })
 })
 
-Router.get('/userdetail',(req,res)=>{
+Router.get('/userdetail', (req, res) => {
       res.render("userdetail")
 })
 
 
-Router.get("/verify",verifyMail);
+Router.get("/verify", verifyMail);
 
 Router.get("/courses-info/ba", (req, res) => {
       res.render("courses-info/ba", { title: "Bachelor of Arts | Govt PG College Bilaspur" })
@@ -236,7 +235,7 @@ Router.get("/courses-info/bta", (req, res) => {
 
 
 
-Router.get("*",(req,res)=>{
+Router.get("*", (req, res) => {
       res.render("error");
 })
 
