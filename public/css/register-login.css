@@ -196,9 +196,9 @@
       }
       #register-h3{
             font-size: 1.1rem;
-            padding-top: 2.5px;
+            padding-top: 4.7px;
       }
-      .register-div h2,.login-div h2{
-            font-size: 1.2rem;
+      .register-div h2 ,.login-div h2{
+            font-size: 1.5rem;
       }
 }
