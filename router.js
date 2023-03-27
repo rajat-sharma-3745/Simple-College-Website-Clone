@@ -12,8 +12,8 @@ require('dotenv/config');
 
 const storage=multer.diskStorage({
       destination:function(req,file,cb){
-cb(null,path.join(__dirname,"/public/userimages"));
-// cb(null,"https://college-site-project.onrender.com/public/userimages");
+// cb(null,path.join(__dirname,"/public/userimages"));
+cb(null,  path.join( "https://college-site-project.onrender.com/userimages/"));
       },
       filename:function(req,file,cb){
             const imagename=Date.now()+'-'+file.originalname;
