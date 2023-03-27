@@ -10,14 +10,14 @@ require('dotenv/config');
 
 // console.log(path.join(__dirname,"/public/userimages"))
 
-const storage=multer.diskStorage({
-      destination:function(req,file,cb){
-cb(null,path.join(__dirname,"/public/userimages"));
-// cb(null,  path.join( "https://college-site-project.onrender.com/public/userimages/"));
+const storage = multer.diskStorage({
+      destination: function (req, file, cb) {
+            cb(null, path.join(__dirname, "/public/userimages"));
+
       },
-      filename:function(req,file,cb){
-            const imagename=Date.now()+'-'+file.originalname;
-cb(null,imagename);
+      filename: function (req, file, cb) {
+            const imagename = Date.now() + '-' + file.originalname;
+            cb(null, imagename);
       }
 })
 const upload = multer({ storage: storage });
@@ -39,7 +39,7 @@ const sendVerfiyMail = async (firstname, email, user_id) => {
             const transporter = nodemailer.createTransport({
                   service: "gmail",
                   host: "smtp.google.com",
-                  type:"SMTP",
+                  type: "SMTP",
                   // port:587,
                   secure: false,
                   requireTLS: true,
