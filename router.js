@@ -12,8 +12,8 @@ require('dotenv/config');
 
 const storage=multer.diskStorage({
       destination:function(req,file,cb){
-// cb(null,path.join(__dirname,"/public/userimages"));
-cb(null,"/public/userimages");
+cb(null,path.join(__dirname,"/public/userimages"));
+// cb(null,"https://college-site-project.onrender.com/public/userimages");
       },
       filename:function(req,file,cb){
             const imagename=Date.now()+'-'+file.originalname;
@@ -39,19 +39,20 @@ const sendVerfiyMail = async (firstname, email, user_id) => {
             const transporter = nodemailer.createTransport({
                   service: "gmail",
                   host: "smtp.google.com",
+                  type:"SMTP",
                   // port:587,
                   secure: false,
                   requireTLS: true,
                   auth: {
-                        user: "sharmarajat3745@gmail.com",
-                        pass: "avuydpdpyxqxcage"
+                        user: "sharmarajat3744@gmail.com",
+                        pass: process.env.SMTP_PASS
                   }
                   , tls: {
                         rejectUnauthorized: false
                   }
             })
             const mailOptions = {
-                  from: "sharmarajat3745@gmail.com",
+                  from: "sharmarajat3744@gmail.com",
                   to: email,
                   subject: "For verification purpose",
                   html: "<p>Hi " + firstname + ",Thanks for signing up with us! You must follow this link of registration to activate your account: Please click here to <a href=https://college-site-project.onrender.com/verify?id=" + user_id + ">verify</a> your mail<br>Thank you</p>"
