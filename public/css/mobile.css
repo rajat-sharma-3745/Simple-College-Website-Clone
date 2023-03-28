@@ -48,7 +48,7 @@
 
 @media screen and (max-width:910px) {
       .max-width {
-            max-width: 87vw;
+            max-width: 88vw;
       }
 
       h1 {
@@ -80,11 +80,14 @@
             
             padding-inline: 3.4px;
       }
+      .footerul li{
+            padding:  0 55px ;
+      }
 
 }
 
 @media screen and (max-width:830px) {
-
+      
       /* .clg-logo img {
             padding-top: 4px;
             width: 5vw ;
@@ -210,6 +213,7 @@
 }
 
 @media screen and (max-width:750px) {
+      
       h1 {
             font-size: 1.5rem;
 
@@ -298,6 +302,14 @@
             padding: 60px 0;
             /* width: 550px; */
       } 
+      .footerul li{
+            padding:  10px 25px ;
+            width: 45%;
+      }
+      .footerul{
+            flex-wrap: wrap;
+      }
+
 
 
       /* .campuscol{
@@ -308,9 +320,9 @@
             /* height: auto; */
       /* max-width: 260px; 
           }*/
-          .max-width {
-            max-width: 91vw;
-      }
+
+
+        
 
 }
 @media screen and (max-width:550px){
@@ -370,9 +382,13 @@
             margin-top: 8px;
       }
 
+      
+
 } 
 @media screen and (max-width:390px) {
-
+      .max-width {
+            max-width: 89vw;
+      }
       .clginfo-toggle {
            
             margin-top: 5.5%;
@@ -391,6 +407,11 @@
             padding: 3.5px 4px;
             margin-left:17px;
             /* font-weight: 200; */
+      }
+      .footerul li{
+            padding:  5px 0 ;
+            padding-left: 20px;
+            width: 90%;
       }
       
 }

@@ -357,6 +357,25 @@ margin-bottom: 25px;
 .cta-div p{
       color: white;
 }
+footer{
+
+     border-top: 0.5px solid black;
+}
+.footerul{
+      padding-top: 12px ;
+      align-items: center;
+      /* justify-content: space-evenly; */
+}
+
+.footerul li{
+      padding:  0 70px ;
+}
+.footerul li a:hover{
+      text-decoration: underline;
+      
+}
+
+
 
 
 .top-banner,#header,.contact-section,.section1,.section2,.section3,.section5,.testimonials,.cta-section,.aboutus,.undergraduate,.postgraduate,.self-finance,.section4,footer,.hrline,.gallery-container,.course-information,.login-pass{

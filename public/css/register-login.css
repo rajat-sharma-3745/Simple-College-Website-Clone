@@ -138,7 +138,7 @@
 }
 .login-div{
   
-      margin-block: 42px;
+      margin-block: 69px;
       /* position: relative; */
       max-width: 450px;
       width: 100%;
@@ -200,5 +200,8 @@
       }
       .register-div h2 ,.login-div h2{
             font-size: 1.5rem;
+      }
+      .login-div{
+       margin-block: 42px;
       }
 }
