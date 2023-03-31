@@ -149,7 +149,7 @@ padding-inline: 5px;
       /* height: 70vh; */
       margin-top:15px;
       margin-bottom: 20px;
-      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(/img/bg3.jpg) no-repeat center center/cover;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(/img/bg3.webp) no-repeat center center/cover;
 }
 
 .section1-left {
@@ -348,7 +348,7 @@ margin-bottom: 25px;
 }
 
 .cta-div{
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/cta.jpg) no-repeat center center/cover;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/cta.webp) no-repeat center center/cover;
       border-radius: 10px;
       padding: 100px 0;
       color: white;
@@ -378,7 +378,7 @@ footer{
 
 
 
-.top-banner,#header,.contact-section,.section1,.section2,.section3,.section5,.testimonials,.cta-section,.aboutus,.undergraduate,.postgraduate,.self-finance,.section4,footer,.hrline,.gallery-container,.course-information,.login-pass{
+.contact-section,.section1,.section2,.section3,.section5,.testimonials,.cta-section,.aboutus,.undergraduate,.postgraduate,.self-finance,.section4,footer,.hrline,.gallery-container,.course-information,.login-pass{
       display: none ;
 }
 .loader{
