@@ -210,6 +210,10 @@
           
             padding-right: 2px;
       }
+      .nav-toggle {
+            
+            margin-left: 19px;
+      }
 }
 
 @media screen and (max-width:750px) {
@@ -255,7 +259,8 @@
       }
 
       .nav-toggle {
-            padding-top: 4.05px;
+            margin-top: 4.05px;
+            margin-left: 9px;
       }
 
       /* .theme h4 {
