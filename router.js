@@ -175,7 +175,7 @@ Router.post('/loginn', async (req, res) => {
 })
 
 Router.get("/", (req, res) => {
-      res.render("index", { title: "Govt PG College Bilaspur" });
+      res.render("index", { title: "Government Post Graduate College Bilaspur" });
 })
 
 Router.get("/about", (req, res) => {
