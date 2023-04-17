@@ -81,7 +81,7 @@
                         <div class="userimage flex items-center " style="column-gap: 8px;">
                               <img src="userimages/<%=user.image%>" class="my-1" alt="Profile Pic"
                                     style="width: 70px; height: 70px; border-radius: 50%;">
-                              <h1 class="py-2">Welcome <Span id="user-title">
+                              <h1 class="py-2" id="user-title-head">Welcome <Span id="user-title">
                                           <%= user.firstname%>
                                     </Span></h1>
                         </div>
@@ -146,8 +146,10 @@
 
                   <script>
                         let usertitle = document.getElementById('user-title');
+                        let usertitlehead = document.getElementById('user-title-head');
                         let text = usertitle.innerText;
-                        console.log(text)
+                        let texthead = usertitlehead.innerText;
+                        console.log(texthead)
                         let index = 0;
 
                         const typewriter = () => {
@@ -155,9 +157,22 @@
                               usertitle.innerText = newtext
                               index++;
                               setTimeout(() => {
-                                    typewriter()
+                                    typewriter();
                               }, 400)
+                              
                         }
+                        
+                        // speech();
+                        // const speech =()=>{
+                        //       let synth=window.speechSynthesis;
+                        //       if(!synth.speaking && texthead){
+                        //       let utterance = new SpeechSynthesisUtterance(texthead);
+                        //       // voices = window.speechSynthesis.getVoices()
+                        //       // utterance.voice = voices[10];
+                              
+                        //       synth.speak(utterance);
+                        //       }
+                        // }
                         typewriter();
 
 
